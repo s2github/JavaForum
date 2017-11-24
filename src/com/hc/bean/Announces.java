@@ -5,7 +5,7 @@ import java.util.Date;
 
 /**
  * @author phn
- * 
+ * 11ssssss
  */
 public class Announces {
 
