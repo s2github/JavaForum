@@ -6,7 +6,7 @@ package com.hc.bean;
 import java.util.List;
 
 /**
- * @author phn
+ * @author 
  * 
  */
 public class Pages {

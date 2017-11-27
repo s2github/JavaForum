@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
 <hibernate-mapping>
-	<class name="com.phn.bean.Types" table="t_type" 
+	<class name="com.hc.bean.Types" table="t_type" 
 		batch-size="5">
 		<id name="id" type="int">
 			<column name="id" />
-			<generator class="increment"></generator>
+			<generator class="native"></generator>
 		</id>
 		<property name="name" type="string">
 			<column name="name" length="30" />
@@ -19,7 +21,7 @@
 		</property>
 
 		<!-- 多对一，多个类型对应一个类别 -->
-		<many-to-one name="typesCategory" class="com.phn.bean.Categorys"
+		<many-to-one name="typesCategory" class="com.hc.bean.Categorys"
 			lazy="proxy">
 			<column name="types_category_id" not-null="true"></column>
 		</many-to-one>

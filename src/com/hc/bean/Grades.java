@@ -4,8 +4,8 @@
 package com.hc.bean;
 
 /**
- * @author 潘海南
- * @email phnlove@163.com
+ * @author 
+ * @email 
  */
 public class Grades {
 	private int id;

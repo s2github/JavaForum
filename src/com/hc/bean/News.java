@@ -6,7 +6,7 @@ package com.hc.bean;
 import java.util.Date;
 
 /**
- * @author phn
+ * @author 
  * 
  */
 public class News {
