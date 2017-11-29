@@ -44,16 +44,15 @@ function checkname() {
 		ts.style.border = '1px solid red';
 		return false;
 	}
-	$
-			.post(
-					"user_CheckName.action",
+	$.post(
+					"user_checkName.action",
 					{
 						"userName" : name
 					},
 					function(data) {
 						var d = $.parseJSON(data);
-						// console.log(d.success);
-						if (d.success == true) {
+						//console.log(d.success);
+						if (d == true) {
 							ts.innerHTML = '&nbsp;<img src="image/wrong.gif"></img>&nbsp;该用户名已被使用!';
 							ts.style.color = "red";
 							ts.style.backgroundColor = '#F8F8F8';
@@ -62,6 +61,9 @@ function checkname() {
 						}
 						;
 					});
+	if(ts.style.color=="red"){
+		return false;
+	}
 	ts.innerHTML = '&nbsp;<img src="image/icon_ok.gif"></img>';
 	ts.style.color = 'green';
 	ts.style.backgroundColor = '#F8F8F8';
@@ -79,16 +81,15 @@ function checknic() {
 		ns.style.border = '1px solid red';
 		return false;
 	}
-	$
-			.post(
-					"user_CheckNic.action",
+	$.post(
+					"user_checkNic.action",
 					{
 						"userNic" : nic
 					},
 					function(data) {
 						var d = $.parseJSON(data);
 						// console.log(d.success);
-						if (d.success == true) {
+						if (d == true) {
 							ns.innerHTML = '&nbsp;<img src="image/wrong.gif"></img>&nbsp;该昵称已被使用!';
 							ns.style.color = "red";
 							ns.style.backgroundColor = '#F8F8F8';
@@ -97,6 +98,9 @@ function checknic() {
 						}
 						;
 					});
+	if(ns.style.color=="red"){
+		return false;
+	}
 	ns.innerHTML = '&nbsp;<img src="image/icon_ok.gif"></img>';
 	ns.style.color = 'green';
 	ns.style.backgroundColor = '#F8F8F8';
@@ -171,7 +175,10 @@ function isEmail(str) {
 	return reg.test(str);
 }
 function register() {
+	
 	if (!checkname()) {
+		return false;
+	} else if (!checknic()) {
 		return false;
 	} else if (!checkpass()) {
 		return false;

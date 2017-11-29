@@ -214,4 +214,15 @@ public class Users {
 		this.status = status;
 	}
 
+	@Override
+	public String toString() {
+		return "Users [id=" + id + ", username=" + username + ", password=" + password + ", nickname=" + nickname
+				+ ", sex=" + sex + ", picture=" + picture + ", email=" + email + ", comefrom=" + comefrom
+				+ ", introduction=" + introduction + ", profession=" + profession + ", gradeIntegral=" + gradeIntegral
+				+ ", integral=" + integral + ", roleId=" + roleId + ", clock=" + clock + ", topCount=" + topCount
+				+ ", comCount=" + comCount + ", registerTime=" + registerTime + ", status=" + status + ", usersGrade="
+				+ usersGrade + ", userTopics=" + userTopics + ", userComments=" + userComments + ", userCommentNews="
+				+ userCommentNews + "]";
+	}
+
 }

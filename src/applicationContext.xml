@@ -94,7 +94,18 @@
 	<!--  
 		用户模块
 	-->
-	
+	<!-- action -->
+	<bean id="userAction" class="com.hc.action.UserAction" scope="prototype">
+		<property name="userService" ref="userService" />
+	</bean>
+	<!-- service -->
+	<bean id="userService" class="com.hc.service.UserServiceImpl" >
+		<property name="userDao" ref="userDao" />
+	</bean>
+	<!-- dao -->
+	<bean id="userDao" class="com.hc.dao.UserDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
 	
 </beans>
 

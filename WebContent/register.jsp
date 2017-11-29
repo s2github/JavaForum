@@ -30,7 +30,7 @@
 		</div>
 		<div class="tbody">
 			<div class="register">
-				<form action="user_Register.action" method="post"
+				<form action="user_register.action" method="post"
 					onsubmit="return register();">
 					<h2 align="left" style="margin-left: 50px;">用户注册</h2>
 					<br />
@@ -38,7 +38,7 @@
 						<tr>
 							<td style="text-align: right;width: 220px;">用&nbsp;户&nbsp;名<font
 								color="red">*</font>：</td>
-							<td><input type="text" name="user.username"
+							<td><input type="text" name="username"
 								onblur="return checkname()" onfocus="warnName()" id="uName" />
 							</td>
 							<td id="namets"
@@ -50,7 +50,7 @@
 						<tr>
 							<td style="text-align: right;width: 220px;">昵&nbsp;&nbsp;&nbsp;&nbsp;称<font
 								color="red">*</font>：</td>
-							<td><input type="text" name="user.nickname" maxlength="16"
+							<td><input type="text" name="nickname" maxlength="16"
 								onblur="return checknic()" onfocus="warnNic()" id="uNic" />
 							</td>
 							<td id="nics"
@@ -62,7 +62,7 @@
 						<tr>
 							<td style="text-align: right;width: 220px;">密&nbsp;&nbsp;&nbsp;&nbsp;码<font
 								color="red">*</font>：</td>
-							<td><input type="password" id="uPass" name="user.password"
+							<td><input type="password" id="uPass" name="password"
 								onblur="return checkpass();" onfocus="warnPass()" />
 							</td>
 							<td id="passts"
@@ -86,7 +86,7 @@
 						<tr>
 							<td style="text-align: right;width: 220px;">邮&nbsp;&nbsp;&nbsp;&nbsp;箱<font
 								color="red">*</font>：</td>
-							<td><input type="text" name="user.email" id="uEmail" onfocus="warnEmail()"
+							<td><input type="text" name="email" id="uEmail" onfocus="warnEmail()"
 								onblur="return checkemail();" />
 							</td>
 							<td id="emailts"

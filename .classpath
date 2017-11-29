@@ -63,5 +63,6 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/xwork-core-2.3.24.jar"/>
 	<classpathentry kind="lib" path="WebContent/ueditor/jsp/ueditor.jar"/>
 	<classpathentry kind="lib" path="WebContent/ueditor/jsp/commons-fileupload-1.2.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/fastjson-1.2.8.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
