@@ -182,17 +182,17 @@
 					<s:if test="currentPage==1">
 						<button disabled="disabled" style="width: 80px;">上一页</button>
 						<button disabled="disabled">1</button>
-						<a href="user_GetNews.action?nowPage=2"><button>2</button>
+						<a href="user_getNews.action?nowPage=2"><button>2</button>
 						</a>
 						<a
-							href="user_GetNews.action?nowPage=<s:property value="%{currentPage+1}"/>"><button
+							href="user_getNews.action?nowPage=<s:property value="%{currentPage+1}"/>"><button
 								style="width: 80px;">下一页</button> </a>
 					</s:if>
 					<s:elseif test="currentPage==2">
 						<a
-							href="user_GetNews.action?nowPage=<s:property value="%{currentPage-1}"/>"><button
+							href="user_getNews.action?nowPage=<s:property value="%{currentPage-1}"/>"><button
 								style="width: 80px;">上一页</button> </a>
-						<a href="user_GetNews.action?nowPage=1"><button>1</button>
+						<a href="user_getNews.action?nowPage=1"><button>1</button>
 						</a>
 						<button disabled="disabled">2</button>
 						<button disabled="disabled" style="width: 80px;">下一页</button>
@@ -202,34 +202,34 @@
 					<s:if test="currentPage==1">
 						<button disabled="disabled" style="width: 80px;">上一页</button>
 						<button disabled="disabled">1</button>
-						<a href="user_GetNews.action?nowPage=2"><button>2</button>
+						<a href="user_getNews.action?nowPage=2"><button>2</button>
 						</a>
-						<a href="user_GetNews.action?nowPage=3"><button>3</button>
+						<a href="user_getNews.action?nowPage=3"><button>3</button>
 						</a>
 						<a
-							href="user_GetNews.action?nowPage=<s:property value="%{currentPage+1}"/>"><button
+							href="user_getNews.action?nowPage=<s:property value="%{currentPage+1}"/>"><button
 								style="width: 80px;">下一页</button> </a>
 					</s:if>
 					<s:elseif test="currentPage==2">
 						<a
-							href="user_GetNews.action?nowPage=<s:property value="%{currentPage-1}"/>"><button
+							href="user_getNews.action?nowPage=<s:property value="%{currentPage-1}"/>"><button
 								style="width: 80px;">上一页</button> </a>
-						<a href="user_GetNews.action?nowPage=1"><button>1</button>
+						<a href="user_getNews.action?nowPage=1"><button>1</button>
 						</a>
 						<button disabled="disabled">2</button>
-						<a href="user_GetNews.action?nowPage=3"><button>3</button>
+						<a href="user_getNews.action?nowPage=3"><button>3</button>
 						</a>
 						<a
-							href="user_GetNews.action?nowPage=<s:property value="%{currentPage+1}"/>"><button
+							href="user_getNews.action?nowPage=<s:property value="%{currentPage+1}"/>"><button
 								style="width: 80px;">下一页</button> </a>
 					</s:elseif>
 					<s:elseif test="currentPage==3">
 						<a
-							href="user_GetNews.action?nowPage=<s:property value="%{currentPage-1}"/>"><button
+							href="user_getNews.action?nowPage=<s:property value="%{currentPage-1}"/>"><button
 								style="width: 80px;">上一页</button> </a>
-						<a href="user_GetNews.action?nowPage=1"><button>1</button>
+						<a href="user_getNews.action?nowPage=1"><button>1</button>
 						</a>
-						<a href="user_GetNews.action?nowPage=2"><button>2</button>
+						<a href="user_getNews.action?nowPage=2"><button>2</button>
 						</a>
 						<button disabled="disabled">3</button>
 						<button disabled="disabled" style="width: 80px;">下一页</button>
@@ -239,22 +239,22 @@
 					<s:if test="%{currentPage==1}">
 						<button disabled="disabled" style="width: 80px;">上一页</button>
 						<button disabled="disabled">1</button>
-						<a href="user_GetNews.action?nowPage=2"><button>2</button>
+						<a href="user_getNews.action?nowPage=2"><button>2</button>
 						</a>
 						<a><button disabled="disabled">...</button> </a>
 						<a
-							href="user_GetNews.action?nowPage=<s:property value="%{totalPages}" />"><button>
+							href="user_getNews.action?nowPage=<s:property value="%{totalPages}" />"><button>
 								<s:property value="%{totalPages}" />
 							</button> </a>
 						<a
-							href="user_GetNews.action?nowPage=<s:property value="%{currentPage+1}"/>"><button
+							href="user_getNews.action?nowPage=<s:property value="%{currentPage+1}"/>"><button
 								style="width: 80px;">下一页</button> </a>
 					</s:if>
 					<s:elseif test="%{currentPage<totalPages}">
 						<a
-							href="user_GetNews.action?nowPage=<s:property value="%{currentPage-1}"/>"><button
+							href="user_getNews.action?nowPage=<s:property value="%{currentPage-1}"/>"><button
 								style="width: 80px;">上一页</button> </a>
-						<a href="user_GetNews.action?nowPage=1"><button>1</button>
+						<a href="user_getNews.action?nowPage=1"><button>1</button>
 						</a>
 						<s:if test="%{currentPage>2}">
 							<a><button disabled="disabled">...</button> </a>
@@ -266,22 +266,22 @@
 							<a><button disabled="disabled">...</button> </a>
 						</s:if>
 						<a
-							href="user_GetNews.action?nowPage=<s:property value="%{totalPages}" />"><button>
+							href="user_getNews.action?nowPage=<s:property value="%{totalPages}" />"><button>
 								<s:property value="%{totalPages}" />
 							</button> </a>
 						<a
-							href="user_GetNews.action?nowPage=<s:property value="%{currentPage+1}"/>"><button
+							href="user_getNews.action?nowPage=<s:property value="%{currentPage+1}"/>"><button
 								style="width: 80px;" style="width: 80px;">下一页</button> </a>
 					</s:elseif>
 					<s:elseif test="%{currentPage==totalPages}">
 						<a
-							href="user_GetNews.action?nowPage=<s:property value="%{currentPage-1}"/>"><button
+							href="user_getNews.action?nowPage=<s:property value="%{currentPage-1}"/>"><button
 								style="width: 80px;">上一页</button> </a>
-						<a href="user_GetNews.action?nowPage=1"><button>1</button>
+						<a href="user_getNews.action?nowPage=1"><button>1</button>
 						</a>
 						<a><button disabled="disabled">...</button> </a>
 						<a
-							href="user_GetNews.action?nowPage=<s:property value="%{totalPages-1}" />"><button>
+							href="user_getNews.action?nowPage=<s:property value="%{totalPages-1}" />"><button>
 								<s:property value="%{totalPages-1}" />
 							</button> </a>
 						<button disabled="disabled">
@@ -297,7 +297,7 @@
 				var currentPage = parseInt($("#currentPage").val());
 				var selectedPage = parseInt($("#selectPage").val());
 				if (selectedPage != 0 && selectedPage != currentPage) {
-					document.goPageForm.action = "user_GetNews.action?nowPage="
+					document.goPageForm.action = "user_getNews.action?nowPage="
 							+ selectedPage;
 					goPageForm.submit();
 				}
@@ -305,7 +305,7 @@
 			}
 		</script>
 		<div class="pageGo" align="right">
-			<form action="user_GetComments.action" method="post"
+			<form action="user_getComments.action" method="post"
 				name="goPageForm">
 				<input type="text" id="currentPage"
 					value="<s:property value="pageBean.currentPage" />"

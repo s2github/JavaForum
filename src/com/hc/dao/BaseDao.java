@@ -23,6 +23,6 @@ public interface BaseDao<T> {
 	
 	public List<T> findAll();
 	
-	public PageBean<T> findByPage(Integer pageCode,Integer pageSize,DetachedCriteria criteria);
+	//public PageBean<T> findByPage(Integer pageCode,Integer pageSize,DetachedCriteria criteria);
 	
 }

@@ -183,7 +183,7 @@
 			</div>
 			<div class="userStyle">
 				<div class="leftBodyNav" id="leftBodyNav">
-					<a href="user_GetNews.action" target="test1"
+					<a href="user_getNews.action" target="test1"
 						onclick="return checkULogin()"><div class="leftBodyNavStyle"
 							id="leftBodyNavStyle_1" onclick="javascript:test_item(1);">
 							我的消息
@@ -192,10 +192,10 @@
 								<sup style="color: red;font-size: 14px;"><s:property
 										value="#session.tu.clock" /> </sup>
 							</s:else>
-						</div> </a> <a href="user_GetTopics.action" target="test1"
+						</div> </a> <a href="user_getTopics.action" target="test1"
 						onclick="return checkULogin()"><div class="leftBodyNavStyle"
 							id="leftBodyNavStyle_2" onclick="javascript:test_item(2);">我的帖子</div>
-					</a> <a href="user_GetComments.action" target="test1"
+					</a> <a href="user_getComments.action" target="test1"
 						onclick="return checkULogin()"><div class="leftBodyNavStyle"
 							id="leftBodyNavStyle_3" onclick="javascript:test_item(3);">我的评论</div>
 					</a> <a href="u/updateInfo.jsp" target="test1"
@@ -204,7 +204,7 @@
 					</a> <a href="u/updatePass.jsp" target="test1"
 						onclick="return checkULogin()"><div class="leftBodyNavStyle"
 							id="leftBodyNavStyle_6" onclick="javascript:test_item(5);">修改密码</div>
-					</a> <a href="user_Logout.action" target="_top"
+					</a> <a href="user_logout.action" target="_top"
 						onclick="return checkULogin()"><div class="leftBodyNavStyle"
 							style="color: red">安全退出</div> </a>
 				</div>
@@ -217,32 +217,32 @@
 							<p>
 								用户名： <font
 									style="font-size: 20px;line-height: 30px;color: #6699CC;font-weight: bolder;">
-									<s:property value="user.username" /> </font><br /> 昵称：
-								<s:property value="user.nickname" />
+									<s:property value="#session.tu.username" /> </font><br /> 昵称：
+								<s:property value="#session.tu.nickname" />
 								<br />性别：
-								<s:property value="user.sex" />
+								<s:property value="#session.tu.sex" />
 								<br />邮箱：
-								<s:property value="user.email" />
+								<s:property value="#session.tu.email" />
 								<br />职业：
-								<s:property value="user.profession" />
+								<s:property value="#session.tu.profession" />
 								<br />现居地：
-								<s:property value="user.comefrom" />
+								<s:property value="#session.tu.comefrom" />
 								<br />用户权限：
-								<s:if test="user.roleId==0">普通用户</s:if>
-								<s:elseif test="user.roleId==6">普通管理员</s:elseif>
+								<s:if test="#session.tu.roleId==0">普通用户</s:if>
+								<s:elseif test="#session.tu.roleId==6">普通管理员</s:elseif>
 								<s:else>超级管理员</s:else>
 								<br />论坛等级：
-								<s:property value="user.usersGrade.id" />
+								<s:property value="#session.tu.usersGrade.id" />
 								<br />论坛头衔：
-								<s:property value="user.usersGrade.honor" />
+								<s:property value="#session.tu.usersGrade.honor" />
 								<br />可用积分：
-								<s:property value="user.integral" />
+								<s:property value="#session.tu.integral" />
 								<br />我的帖子数：
-								<s:property value="user.topCount" />
+								<s:property value="#session.tu.topCount" />
 								&nbsp;&nbsp;&nbsp;&nbsp;我的评论数：
-								<s:property value="user.comCount" />
+								<s:property value="#session.tu.comCount" />
 								<br />注册时间：
-								<s:date name="user.registerTime"
+								<s:date name="#session.tu.registerTime"
 									format="yyyy-MM-dd hh:mm:ss" />
 						</div>
 						<div align="left"
@@ -250,10 +250,10 @@
 							<p>
 								&nbsp;&nbsp;&nbsp;&nbsp;<img alt="我的头像"
 									style="width: 140px;height: 200px;"  onerror="this.src='./image/ds-java.png'" 
-									src="<s:property value="user.picture" />">
+									src="<s:property value="#session.tu.picture" />">
 							<p>
 								个人简介：<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								<s:property value="user.introduction" />
+								<s:property value="#session.tu.introduction" />
 						</div>
 
 					</div>

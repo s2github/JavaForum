@@ -8,7 +8,11 @@
 	
 	<package name="JavaForum" namespace="/" extends="struts-default">
 		<action name="user_*" class="userAction" method="{1}">
-			<result name="login">/login.jsp</result>
+			<result name="login" type="redirect">/login.jsp</result>
+			<result name="index" type="redirect">/index.jsp</result>
+			<result name="home" type="redirect">/u/home.jsp</result>
+			<result name="updateInfo" type="redirect">/u/updateInfo.jsp</result>
+			<result name="news" type="redirect">/u/news.jsp</result>
 		</action>
 	
 	</package>

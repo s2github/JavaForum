@@ -141,7 +141,7 @@ var msg=""+'${request.tipMessage}';
  	} 
 </script>
 <div id="home" align="left">
-	<form action="user_UpdatePass.action" method="post"
+	<form action="user_updatePass.action" method="post"
 		onsubmit="return checkUpdatePass();">
 		<table style="padding-top: 80px;margin-left: 80px">
 			<tr>

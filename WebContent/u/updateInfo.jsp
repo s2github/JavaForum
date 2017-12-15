@@ -89,7 +89,7 @@
 			return true;
 		}
 			$.post(
-							"user_CheckNic.action",
+							"user_checkNic.action",
 							{
 								"userNic" : nic
 							},
@@ -105,6 +105,7 @@
 								}
 								;
 							});
+		if(ns.style.color == "red"){return false;}
 		ns.innerHTML = '&nbsp;<img src="image/icon_ok.gif"></img>';
 		ns.style.color = 'green';
 		ns.style.backgroundColor = '#F8F8F8';
@@ -160,7 +161,7 @@
 	<div
 		style="float: left;background-color: white;width: 50px;height: 100%"></div>
 	<div style="float: left;width: 460px;height: 100%">
-		<form action="user_UpdateInfo.action" method="post" onsubmit="return checkUpdate()">
+		<form action="user_updateInfo.action?username=${tu.username }" method="post" onsubmit="return checkUpdate()">
 			<div align="left"
 				style="float: left;background-color: white;width: 100%;height: 90%;line-height: 28px;">
 				<table>
@@ -172,7 +173,7 @@
 						<td>昵&nbsp;&nbsp;&nbsp;称</td>
 						<td><input type="text" class="inputText"
 							value="<s:property value="#session.tu.nickname" />"
-							name="userNic" maxlength="16" onblur="return checknic()"
+							name="nickname" maxlength="16" onblur="return checknic()"
 							onfocus="warnNic()" id="uNic" /><input id="defaultNic"
 							value="<s:property value="#session.tu.nickname" />"
 							style="display: none;" />
@@ -182,13 +183,13 @@
 					</tr>
 					<tr>
 						<td>性&nbsp;&nbsp;&nbsp;别</td>
-						<td><input name="userSex" type="radio" 
+						<td><input name="sex" type="radio" 
 							value="男"> 男 <input name="userSex" type="radio"
 							value="女"> 女</td>
 					</tr>
 					<tr>
 						<td>邮&nbsp;&nbsp;&nbsp;箱</td>
-						<td><input type="text" name="userEmail" class="inputText"
+						<td><input type="text" name="email" class="inputText"
 							id="uEmail" value="<s:property value="#session.tu.email" />"
 							onfocus="warnEmail()" onblur="return checkemail();" /><input
 							id="defaultEmail"
@@ -200,20 +201,20 @@
 					</tr>
 					<tr>
 						<td>职&nbsp;&nbsp;&nbsp;业</td>
-						<td><input type="text" class="inputText" name="userProfe"
+						<td><input type="text" class="inputText" name="profession"
 							value="<s:property value="#session.tu.profession" />">
 						</td>
 					</tr>
 
 					<tr>
 						<td>现居地</td>
-						<td><input type="text" class="inputText" name="userFrom"
+						<td><input type="text" class="inputText" name="comefrom"
 							value="<s:property value="#session.tu.comefrom" />"></td>
 					</tr>
 				</table>
 				个人简介<br />
 				<s:textarea style="width: 450px;height: 100px;resize: none;"
-					value="%{#session.tu.introduction}" name="userIntro">
+					value="%{#session.tu.introduction}" name="introduction">
 				</s:textarea>
 
 			</div>
@@ -228,7 +229,7 @@
 		<p>
 			<img alt="我的头像" style="width: 160px;height: 220px;"  onerror="this.src='./image/ds-java.png'" 
 				src="<s:property value="#session.tu.picture" />">
-		<form action="uploadUserPic.action" enctype="multipart/form-data"
+		<form action="user_uploadUserPic.action" enctype="multipart/form-data"
 			method="POST" onsubmit="return uploadF();">
 			<div align="right">
 				<input type="text" class="inputText" style="width: 160px;"

@@ -219,13 +219,13 @@ a img {
 					<sup style="color: red;font-size: 14px;"><s:property
 							value="#session.tu.clock" /> </sup>
 				</s:else>
-				[ <a href="user_Logout.action" onclick="return logout()"
+				[ <a href="user_logout.action" onclick="return logout()"
 					style="color:red">安全退出</a> ]
 			</div>
 		</s:else>
 		<div
 			style="width: 120px;height: 30px;line-height: 30px;float: left;font-weight: bold;text-align: center;font-size: 16px;font-family: 微软雅黑">
-			<a href="user_GoHome.action" onclick="return checkLogin()">个人中心</a>
+			<a href="user_goHome.action" onclick="return checkLogin()">个人中心</a>
 		</div>
 	</div>
 	<div>
@@ -238,8 +238,8 @@ a img {
 		</li>
 		<li><a href="topic_getAllTopic.action">帖子</a>
 			<ul>
-				<li><a href="topic_GetHotTopic.action" target="_top">热门帖子</a></li>
-				<li><a href="topic_GetNiceTopic.action" target="_top">精品帖子</a>
+				<li><a href="topic_getHotTopic.action" target="_top">热门帖子</a></li>
+				<li><a href="topic_getNiceTopic.action" target="_top">精品帖子</a>
 				</li>
 			</ul>
 		</li>

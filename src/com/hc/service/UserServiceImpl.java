@@ -1,7 +1,13 @@
 package com.hc.service;
 
+import java.util.List;
+import java.util.Set;
+
+import org.hibernate.criterion.DetachedCriteria;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.hc.bean.News;
+import com.hc.bean.PageBean;
 import com.hc.bean.Users;
 import com.hc.dao.UserDao;
 
@@ -17,7 +23,6 @@ public class UserServiceImpl implements UserService {
 	 */
 	@Override
 	public void register(Users user) {
-		System.out.println("-------------------");
 		userDao.save(user);
 	}
 	
@@ -34,6 +39,34 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public boolean findByUserNic(String nic) {
 		return userDao.findByUserNic(nic);
+	}
+	/**
+	 * 查询用户是否存在
+	 */
+	@Override
+	public Users findUser(Users user) {
+		return userDao.findUser(user);
+	}
+	/**
+	 * 更新用户信息
+	 */
+	@Override
+	public void updateInfo(Users user) {
+		userDao.update(user);
+	}
+	/**
+	 * 更新用户信息之查询该用户
+	 */
+	@Override
+	public Users selectOne(String username) {
+		return userDao.selectOne(username);
+	}
+	/**
+	 * 获取News
+	 */
+	@Override
+	public PageBean<News> findByPage(int nowPage, int pageSize, int id) {
+		return userDao.findByPage(nowPage,pageSize,id);
 	}
 	
 }

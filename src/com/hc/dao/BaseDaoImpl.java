@@ -72,26 +72,27 @@ public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
 	/** 
 	 * 分页查询
 	 */
-	public PageBean<T> findByPage(Integer pageCode, Integer pageSize, DetachedCriteria criteria) {
+	public PageBean<T> findByPage(Integer currentPage, Integer pageSize, DetachedCriteria criteria) {
 		//创建分页对象
 		PageBean<T> page = new PageBean<T>();
-		//一个一个设置属性
-		page.setPageCode(pageCode);
+		//一个一个设置属性，设置当前页面
+		page.setCurrentPage(currentPage);
+		//设置每页显示记录数
 		page.setPageSize(pageSize);
 		//查询 select count(*)
 		criteria.setProjection(Projections.rowCount());
 		
 		List<Number> list = (List<Number>) this.getHibernateTemplate().findByCriteria(criteria);
 		if(list != null && list.size() > 0){
-			int totalCount = list.get(0).intValue();
-			//总记录数
-			page.setTotalCount(totalCount);
+			int allRecords = list.get(0).intValue();
+			//设置总记录数
+			page.setAllRecords(allRecords);
 		}
 		//清除 sql 把聚合函数变为 select * from
 		criteria.setProjection(null);
-		List<T> beanList = (List<T>) this.getHibernateTemplate().findByCriteria(criteria, (pageCode-1)*pageSize,pageSize);
+		List<T> pageList = (List<T>) this.getHibernateTemplate().findByCriteria(criteria, (currentPage-1)*pageSize,pageSize);
 		//每页显示的数据
-		page.setBeanList(beanList);
+		page.setPageList(pageList);
 		return page;
 	}
 

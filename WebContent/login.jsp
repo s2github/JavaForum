@@ -33,7 +33,7 @@ if(self.location!=top.location) { top.location.href=self.location.href;}
 		</div>
 		<div class="tbody">
 			<div class="login">
-				<form action="user_Login.action" method="post"
+				<form action="user_login.action" method="post"
 					onsubmit="return login();" id="loginForm">
 					<br /> <br />
 					<h2 align="left" style="margin-left: 50px;">用户登录</h2>
@@ -41,7 +41,7 @@ if(self.location!=top.location) { top.location.href=self.location.href;}
 					<table style="font-size: 18px;" align="left">
 						<tr>
 							<td style="text-align: right;width: 220px;">用&nbsp;户&nbsp;名：</td>
-							<td><input type="text" name="user.username" id="uName"
+							<td><input type="text" name="username" id="uName"
 								maxlength="8" onfocus="warnName()" onblur="return checkname()" />
 							</td>
 							<td id="namets"
@@ -53,7 +53,7 @@ if(self.location!=top.location) { top.location.href=self.location.href;}
 						</tr>
 						<tr>
 							<td style="text-align: right;width: 220px;">密&nbsp;&nbsp;&nbsp;&nbsp;码：</td>
-							<td><input type="password" name="user.password" id="uPass"
+							<td><input type="password" name="password" id="uPass"
 								maxlength="16" onfocus="warnPass()" onblur="return checkpass();" />
 							</td>
 							<td id="passts"
